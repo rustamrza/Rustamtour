@@ -1,0 +1,139 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Шапка */
+header {
+  background-color: #2b3d4f;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Баннер */
+.hero {
+  background: url("../images/baku_old_modern.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Секция экскурсий */
+.tours {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.tours h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tour {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.tour img {
+ width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.tour h4 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.tour p {
+  margin: 10px 0;
+}
+
+.tour a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2b3d4f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.tour:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tour a:hover {
+  text-decoration: underline;
+}
+
+.tours-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Подвал */
+footer {
+  background-color: #2b3d4f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
