@@ -13,52 +13,69 @@
     <h1>Rustamtour</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="excursions.html">Экскурсии</a></li>
-        <li><a href="guide.html">О гиде</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#tours">Экскурсии</a></li>
+        <li><a href="#about">О гиде</a></li>
+        <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Баннер -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <h2>Открой для себя Баку: от средневековья до современности</h2>
     <p>Авторские экскурсии, исторические тайны и живая атмосфера города.</p>
   </section>
 
+  <!-- О гиде -->
+  <section id="about" class="about">
+    <h3>О гиде</h3>
+    <p>Здравствуйте! Меня зовут Рустам. Я — лицензированный экскурсовод, посвятивший более 10 лет исследованию истории Баку и Азербайджана. Мои туры — это больше, чем прогулка. Это — путешествие во времени.</p>
+  </section>
+
   <!-- Экскурсии -->
-  <section class="tours">
-  <h3>Популярные экскурсии</h3>
+  <section id="tours" class="tours">
+    <h3>Популярные экскурсии</h3>
 
-  <div class="tours-container">
+    <div class="tours-container">
 
-    <div class="tour">
-      <img src="images/baku_old_modern.jpg" alt="Средневековый и современный Баку">
-      <h4>Средневековый и современный Баку</h4>
-      <p>Прогулка по Ичери Шехер и знакомство с лицом нового Баку.</p>
-      <a href="excursions.html">Подробнее</a>
+      <div class="tour">
+        <img src="images/baku_old_modern.jpg" alt="Средневековый и современный Баку">
+        <h4>Средневековый и современный Баку</h4>
+        <p>Прогулка по Ичери Шехер и знакомство с лицом нового Баку.</p>
+        <a href="excursions.html">Подробнее</a>
+      </div>
+
+      <div class="tour">
+        <img src="images/gobustan.jpg" alt="Гобустан и вулканы">
+        <h4>Гобустан и вулканы</h4>
+        <p>Древние петроглифы, ландшафты и вулканы — всё за один день!</p>
+        <a href="excursions.html">Подробнее</a>
+      </div>
+
+      <div class="tour">
+        <img src="images/ateshgah.jpg" alt="Атешгях и Янардаг">
+        <h4>Атешгях и Янардаг</h4>
+        <p>Огненные святыни, древние культы и незабываемые впечатления.</p>
+        <a href="excursions.html">Подробнее</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="tour">
-      <img src="images/gobustan.jpg" alt="Гобустан и вулканы">
-      <h4>Гобустан и вулканы</h4>
-      <p>Древние петроглифы, ландшафты и вулканы — всё за один день!</p>
-      <a href="excursions.html">Подробнее</a>
-    </div>
-
-    <div class="tour">
-      <img src="images/ateshgah.jpg" alt="Атешгях и Янардаг">
-      <h4>Атешгях и Янардаг</h4>
-      <p>Огненные святыни, древние культы и незабываемые впечатления.</p>
-      <a href="excursions.html">Подробнее</a>
-    </div>
-
-  </div>
-</section>
+  <!-- Преимущества -->
+  <section class="benefits">
+    <h3>Почему выбирают нас</h3>
+    <ul>
+      <li>Глубокие исторические знания</li>
+      <li>Индивидуальный подход к каждому гостю</li>
+      <li>Фото-материалы и архивы исчезнувших памятников</li>
+    </ul>
+  </section>
 
   <!-- Подвал -->
-  <footer>
+  <footer id="contacts">
+    <p>Контакты: +994707102377 | rustamrza@example.com</p>
     <p>&copy; 2025 Rustamtour. Все права защищены.</p>
   </footer>
 

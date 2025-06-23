@@ -120,6 +120,62 @@ nav a:hover {
   padding: 0 20px;
 }
 
+/* --- Секция "О гиде" --- */
+.about {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* --- Секция "Преимущества" --- */
+.benefits {
+  background-color: #eef2f5;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.benefits h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.benefits li::before {
+  content: "✔";
+  color: #2b3d4f;
+  position: absolute;
+  left: 0;
+}
+
+/* --- Коррекция якорей (смещение) --- */
+:target {
+  scroll-margin-top: 80px; /* если header фиксируется — помогает прокрутке */
+}
 
 @keyframes fadeInUp {
   to {
