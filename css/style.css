@@ -177,12 +177,142 @@ nav a:hover {
   scroll-margin-top: 80px; /* если header фиксируется — помогает прокрутке */
 }
 
+.excursions-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.excursions-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.excursion {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.excursion:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.excursion h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #2b3d4f;
+}
+
+.excursion p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+
+/* --- Секция "О гиде" --- */
+.guide {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.guide h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.guide p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* --- Секция "Контакты" --- */
+.contacts {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contacts p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* === Подарки и сувениры === */
+
+.gift-gallery {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.gift-gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.gallery-row {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gallery-row img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.03);
+}
+
+gift-callout {
+  background-color: #fff7e6;
+  border-top: 1px solid #ffe0b2;
+  border-bottom: 1px solid #ffe0b2;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.gift-callout a {
+  color: #b45f06;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.gift-callout a:hover {
+  color: #7a3e03;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+}
+
 
 /* Подвал */
 footer {
