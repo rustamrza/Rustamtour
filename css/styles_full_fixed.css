@@ -1,12 +1,19 @@
-/* Общие стили */
-body {
+/* === Глобальные настройки === */
+html, body {
+  width: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   background-color: #f7f7f7;
   color: #333;
 }
 
-/* Шапка */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* === Шапка === */
 header {
   background-color: #2b3d4f;
   color: white;
@@ -23,6 +30,7 @@ nav ul {
   padding: 0;
   margin: 10px 0 0 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -35,7 +43,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Баннер */
+/* === Баннер === */
 .hero {
   background: url("../images/baku_old_modern.jpg") no-repeat center center/cover;
   color: white;
@@ -54,7 +62,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Секция экскурсий */
+/* === Секция экскурсий === */
 .tours {
   padding: 40px 20px;
   background-color: #fff;
@@ -65,23 +73,32 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
+.tours-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .tour {
   background-color: #f0f0f0;
   border-radius: 8px;
   padding: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tour {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
 }
 
 .tour img {
- width: 100%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 6px;
+  display: block;
+  margin: 0 auto;
 }
 
 .tour h4 {
@@ -101,7 +118,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-
 .tour:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -111,35 +127,70 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.tours-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* --- Секция "О гиде" --- */
-.about {
-  background-color: #ffffff;
+/* === О гиде (index.html) === */
+.about-preview {
   padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.about-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-preview p {
+  max-width: 600px;
+  margin: 0 auto 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-preview .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #b45f06;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.about-preview .btn:hover {
+  background-color: #7a3e03;
+}
+
+/* === Страница guide.html === */
+.guide {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: center;
 }
 
-.about h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
+.guide h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.about p {
+.guide p {
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* --- Секция "Преимущества" --- */
+/* === Преимущества === */
 .benefits {
   background-color: #eef2f5;
   padding: 40px 20px;
@@ -172,73 +223,7 @@ nav a:hover {
   left: 0;
 }
 
-/* --- Коррекция якорей (смещение) --- */
-:target {
-  scroll-margin-top: 80px; /* если header фиксируется — помогает прокрутке */
-}
-
-.excursions-list {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.excursions-list h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-}
-
-.excursion {
-  background-color: #f5f5f5;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  transition: box-shadow 0.3s ease;
-}
-
-.excursion:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.excursion h3 {
-  margin-top: 0;
-  font-size: 22px;
-  color: #2b3d4f;
-}
-
-.excursion p {
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* --- Секция "О гиде" --- */
-.guide {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.guide h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.guide p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* --- Секция "Контакты" --- */
+/* === Контакты === */
 .contacts {
   max-width: 800px;
   margin: 40px auto;
@@ -256,13 +241,16 @@ nav a:hover {
   margin: 8px 0;
 }
 
-/* === Подарки и сувениры === */
-
+/* === Галерея подарков === */
 .gift-gallery {
   margin-top: 40px;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .gift-gallery h2 {
@@ -272,12 +260,13 @@ nav a:hover {
 
 .gallery-row {
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .gallery-row img {
-  width: 100%;
-  max-width: 500px;
+  width: auto;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
@@ -287,7 +276,14 @@ nav a:hover {
   transform: scale(1.03);
 }
 
-gift-callout {
+.caption {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* === Ссылки на подарки === */
+.gift-callout {
   background-color: #fff7e6;
   border-top: 1px solid #ffe0b2;
   border-bottom: 1px solid #ffe0b2;
@@ -307,14 +303,28 @@ gift-callout {
   color: #7a3e03;
 }
 
-.caption {
+.gift-callout.personal {
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   font-size: 0.95rem;
-  color: #555;
-  margin-top: 8px;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
 }
 
+.gift-callout.personal a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-/* Подвал */
+.gift-callout.personal a:hover {
+  color: #000;
+}
+
+/* === Подвал === */
 footer {
   background-color: #2b3d4f;
   color: white;
