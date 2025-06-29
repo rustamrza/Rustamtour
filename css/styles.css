@@ -323,6 +323,46 @@ nav a:hover {
 .gift-callout.personal a:hover {
   color: #000;
 }
+/* Стили для блока с иконками в header */
+.social-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.15);
+
+}
+.contact-label {
+  font-size: 15px;
+  color: white;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+/* Стили для футера */
+.footer-social {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-social a:hover {
+  color: #ffe58f;
+}
 
 /* === Подвал === */
 footer {
